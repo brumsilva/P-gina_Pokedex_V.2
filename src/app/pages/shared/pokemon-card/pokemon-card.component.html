@@ -1,0 +1,21 @@
+<ng-template
+ngFor let-pokemon [ngForOf]="getAllPokemons"
+>
+<a class="pokemon"
+*ngIf="pokemon.status"
+[routerLink]="pokemon.status.id"
+>
+<section class="pokemon__card">
+      <h2 class="pokemon__title">{{ pokemon.name }}</h2>
+      <ul>
+        <li *ngFor="let value of pokemon.status.types">{{value.type.name}}</li>
+      </ul>
+</section>
+<section class="pokemon__img">
+  <img
+  [src]="pokemon.status.sprites.front_default" [alt]="pokemon.name"
+  class="pokemon__img-img"
+  style="max-width: 300px;">
+</section>
+</a>
+</ng-template>
