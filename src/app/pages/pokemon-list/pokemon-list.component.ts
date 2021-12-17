@@ -24,6 +24,7 @@ export class PokemonListComponent implements OnInit {
         this.setAllPokemons = res.results;
         this.getAllPokemons = this.setAllPokemons;
         console.log(this.getAllPokemons);
+        console.log(this.setAllPokemons)
       },
       error => {
         this.apiError = true;
